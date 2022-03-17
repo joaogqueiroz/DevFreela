@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "RJ9PzI1lWRPBhqcDZz98GyT4ShhDj91kIoV4BOz6xzs=",
+  "Source": "DevFreela.Api",
+  "BasePath": "_content/DevFreela.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
