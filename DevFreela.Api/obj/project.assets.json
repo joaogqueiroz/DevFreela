@@ -72,6 +72,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "DevFreela.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/DevFreela.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevFreela.Core.dll": {}
+        }
       }
     }
   },
@@ -200,10 +210,16 @@
         "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "DevFreela.Core/1.0.0": {
+      "type": "project",
+      "path": "../DevFreela.Core/DevFreela.Core.csproj",
+      "msbuildProject": "../DevFreela.Core/DevFreela.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "DevFreela.Core >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -236,12 +252,19 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "http://proget.icatuseguros.com.br/nuget/Icatu": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/icatu/_packaging/Corporativo/nuget/v3/index.json": {},
+        "https://pkgs.dev.azure.com/icatu/_packaging/Previdencia/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
+              "projectPath": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

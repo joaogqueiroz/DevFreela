@@ -25,3 +25,5 @@ C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\obj\Debug\net6.0\refin
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\obj\Debug\net6.0\DevFreela.Api.pdb
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\obj\Debug\net6.0\DevFreela.Api.genruntimeconfig.cache
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\obj\Debug\net6.0\ref\DevFreela.Api.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\DevFreela.Core.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\DevFreela.Core.pdb

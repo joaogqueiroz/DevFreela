@@ -1,0 +1,12 @@
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Core\bin\Debug\net6.0\DevFreela.Core.deps.json
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Core\bin\Debug\net6.0\DevFreela.Core.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Core\bin\Debug\net6.0\DevFreela.Core.pdb
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Core\obj\Debug\net6.0\DevFreela.Core.csproj.AssemblyReference.cache
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Core\obj\Debug\net6.0\DevFreela.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Core\obj\Debug\net6.0\DevFreela.Core.AssemblyInfoInputs.cache
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Core\obj\Debug\net6.0\DevFreela.Core.AssemblyInfo.cs
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Core\obj\Debug\net6.0\DevFreela.Core.csproj.CoreCompileInputs.cache
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Core\obj\Debug\net6.0\DevFreela.Core.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Core\obj\Debug\net6.0\refint\DevFreela.Core.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Core\obj\Debug\net6.0\DevFreela.Core.pdb
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Core\obj\Debug\net6.0\ref\DevFreela.Core.dll
