@@ -1,0 +1,15 @@
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net6.0\DevFreela.Infrastructure.deps.json
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net6.0\DevFreela.Infrastructure.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net6.0\DevFreela.Infrastructure.pdb
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net6.0\DevFreela.Core.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net6.0\DevFreela.Core.pdb
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\DevFreela.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\DevFreela.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\DevFreela.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\DevFreela.Infrastructure.AssemblyInfo.cs
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\DevFreela.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\DevFreela.Infrastructure.csproj.CopyComplete
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\DevFreela.Infrastructure.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\refint\DevFreela.Infrastructure.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\DevFreela.Infrastructure.pdb
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\ref\DevFreela.Infrastructure.dll

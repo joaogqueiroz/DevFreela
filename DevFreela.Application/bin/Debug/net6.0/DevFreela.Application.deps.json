@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DevFreela.Application/1.0.0": {
+        "dependencies": {
+          "DevFreela.Core": "1.0.0",
+          "DevFreela.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "DevFreela.Application.dll": {}
+        }
+      },
+      "DevFreela.Core/1.0.0": {
+        "runtime": {
+          "DevFreela.Core.dll": {}
+        }
+      },
+      "DevFreela.Infrastructure/1.0.0": {
+        "dependencies": {
+          "DevFreela.Core": "1.0.0"
+        },
+        "runtime": {
+          "DevFreela.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DevFreela.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevFreela.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevFreela.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
