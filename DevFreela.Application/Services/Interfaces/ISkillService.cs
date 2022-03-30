@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using DevFreela.Application.ViewModels;
-namespace DevFreela.Application.Interfaces
+namespace DevFreela.Application.Services.Interfaces
 {
   public interface ISkillService
   {

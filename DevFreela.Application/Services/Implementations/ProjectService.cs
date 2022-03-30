@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using DevFreela.Application.InputModels;
-using DevFreela.Application.Interfaces;
+using DevFreela.Application.Services.Interfaces;
 using DevFreela.Application.ViewModels;
 using DevFreela.Infrastructure.Persistence;
 using DevFreela.Core.Entities;
@@ -26,7 +26,7 @@ namespace DevFreela.Application.Services.Implementations
     public ProjectDetailsViewModel GetById(int id)
     {
       var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
-
+      if (project == null) return null;
       var projectDetailsViewModel = new ProjectDetailsViewModel(
         project.Id,
         project.Title,

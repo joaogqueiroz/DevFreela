@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using DevFreela.Application.ViewModels;
 using DevFreela.Application.InputModels;
-namespace DevFreela.Application.Interfaces
+namespace DevFreela.Application.Services.Interfaces
 {
   public interface IUserService
   {
