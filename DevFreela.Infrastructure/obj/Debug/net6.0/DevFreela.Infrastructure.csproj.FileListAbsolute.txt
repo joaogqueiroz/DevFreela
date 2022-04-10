@@ -13,3 +13,5 @@ C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\n
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\refint\DevFreela.Infrastructure.dll
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\DevFreela.Infrastructure.pdb
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\ref\DevFreela.Infrastructure.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\bin\Debug\net6.0\DevFreela.Infrastructure.runtimeconfig.json
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Infrastructure\obj\Debug\net6.0\DevFreela.Infrastructure.genruntimeconfig.cache

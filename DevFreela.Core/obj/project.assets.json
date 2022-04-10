@@ -36,10 +36,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://proget.icatuseguros.com.br/nuget/Icatu": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/icatu/_packaging/Corporativo/nuget/v3/index.json": {},
-        "https://pkgs.dev.azure.com/icatu/_packaging/Previdencia/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
