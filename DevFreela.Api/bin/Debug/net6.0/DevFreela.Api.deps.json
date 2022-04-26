@@ -11,6 +11,7 @@
           "DevFreela.Application": "1.0.0",
           "DevFreela.Core": "1.0.0",
           "DevFreela.Infrastructure": "1.0.0",
+          "MediatR": "10.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
           "Microsoft.EntityFrameworkCore.Design": "6.0.3",
           "Swashbuckle.AspNetCore": "6.2.3"
@@ -512,7 +513,9 @@
       "DevFreela.Application/1.0.0": {
         "dependencies": {
           "DevFreela.Core": "1.0.0",
-          "DevFreela.Infrastructure": "1.0.0"
+          "DevFreela.Infrastructure": "1.0.0",
+          "MediatR": "10.0.1",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1"
         },
         "runtime": {
           "DevFreela.Application.dll": {}

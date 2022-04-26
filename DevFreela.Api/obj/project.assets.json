@@ -730,7 +730,9 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "DevFreela.Core": "1.0.0",
-          "DevFreela.Infrastructure": "1.0.0"
+          "DevFreela.Infrastructure": "1.0.0",
+          "MediatR": "10.0.1",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1"
         },
         "compile": {
           "bin/placeholder/DevFreela.Application.dll": {}
