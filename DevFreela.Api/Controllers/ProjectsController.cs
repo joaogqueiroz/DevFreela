@@ -13,6 +13,8 @@ using DevFreela.Application.Commands.DeleteProject;
 using DevFreela.Application.Commands.CreateComment;
 using DevFreela.Application.Commands.StartProject;
 using DevFreela.Application.Commands.FinishProject;
+using DevFreela.Application.Queries.GetAllProjects;
+using DevFreela.Application.Queries.GetProjectById;
 using DevFreela.Application.ViewModels;
 using DevFreela.Infrastructure.Persistence;
 using MediatR;
@@ -21,25 +23,25 @@ namespace DevFreela.Api.Controllers
   [Route("api/projects")]
   public class ProjectsController : ControllerBase
   {
-    private readonly IProjectService _projectService;
     private readonly IMediator _mediator;
-    public ProjectsController(IProjectService projectService, IMediator mediator)
+    public ProjectsController(IMediator mediator)
     {
-      _projectService = projectService;
       _mediator = mediator;
     }
 
     [HttpGet]
-    public IActionResult Get(string query)
+    public async Task<IActionResult> Get(string query)
     {
-      var projects = _projectService.GetAll();
+      var getAllProject = new GetAllProjectsQuery(query);
+      var projects = await _mediator.Send(getAllProject);
       return Ok(projects);
     }
 
     [HttpGet("{Id}")]
-    public IActionResult GetById(int Id)
+    public async Task<IActionResult> GetById(int Id)
     {
-      var project = _projectService.GetById(Id);
+      var query = new GetProjectByIdQuery(Id);
+      var project = await _mediator.Send(query);
       if (project == null) return NotFound();
       return Ok(project);
     }

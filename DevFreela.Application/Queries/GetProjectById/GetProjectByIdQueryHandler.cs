@@ -1,35 +1,28 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using DevFreela.Application.InputModels;
-using DevFreela.Application.Services.Interfaces;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using MediatR;
 using DevFreela.Application.ViewModels;
 using DevFreela.Infrastructure.Persistence;
-using DevFreela.Core.Entities;
 using Microsoft.EntityFrameworkCore;
-
-namespace DevFreela.Application.Services.Implementations
+namespace DevFreela.Application.Queries.GetProjectById
 {
-  public class ProjectService : IProjectService
+  public class GetProjectByIdQueryHandler : IRequestHandler<GetProjectByIdQuery, ProjectDetailsViewModel>
   {
+
     private readonly DevFreelaDbContext _dbContext;
-    public ProjectService(DevFreelaDbContext dbContext)
+    public GetProjectByIdQueryHandler(DevFreelaDbContext dbContext)
     {
       _dbContext = dbContext;
     }
-    public List<ProjectViewModel> GetAll()
+    public async Task<ProjectDetailsViewModel> Handle(GetProjectByIdQuery request, CancellationToken cancellationToken)
     {
-      var projects = _dbContext.Projects;
-      var projectsViewModel = projects.Select(p => new ProjectViewModel(p.Id, p.Title, p.CreatedAt)).ToList();
-      return projectsViewModel;
-    }
-
-    public ProjectDetailsViewModel GetById(int id)
-    {
-      var project = _dbContext.Projects
+      var project = await _dbContext.Projects
       .Include(p => p.Client)
       .Include(p => p.Freelancer)
-      .SingleOrDefault(p => p.Id == id);
+      .SingleOrDefaultAsync(p => p.Id == request.Id);
       if (project == null) return null;
       var projectDetailsViewModel = new ProjectDetailsViewModel(
         project.Id,
