@@ -16,8 +16,6 @@ using System.Collections.Specialized;
 using System.Linq;
 using System.Threading.Tasks;
 using DevFreela.Infrastructure.Persistence;
-using DevFreela.Application.Services.Implementations;
-using DevFreela.Application.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,7 +23,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DevFreelaCs");
 builder.Services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionString));
-builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddControllers();
 builder.Services.AddMediatR(typeof(CreateProjectCommand));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

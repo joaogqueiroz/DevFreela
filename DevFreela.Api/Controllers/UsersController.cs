@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using DevFreela.Api.Models;
 using DevFreela.Application.InputModels;
-using DevFreela.Application.Services.Interfaces;
 using DevFreela.Application.Commands.CreateUser;
 using MediatR;
 using System.Threading.Tasks;
@@ -20,7 +19,7 @@ namespace DevFreela.Api.Controllers
     public async Task<IActionResult> GetById(int id)
     {
       var query = new GetUserByIdQuery(id);
-      var user = _mediator.Send(query);
+      var user = await _mediator.Send(query);
 
       if (user == null)
       {

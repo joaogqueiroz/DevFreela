@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DevFreela.Api.Models;
 using Microsoft.Extensions.Options;
-using DevFreela.Application.Services.Interfaces;
 using DevFreela.Application.InputModels;
 using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.Commands.UpdateProject;

@@ -1,4 +1,3 @@
-using DevFreela.Application.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using MediatR;
 using DevFreela.Application.Queries.GetAllSkills;
