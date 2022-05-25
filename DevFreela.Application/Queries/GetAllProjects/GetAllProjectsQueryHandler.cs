@@ -5,8 +5,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using DevFreela.Application.ViewModels;
-using DevFreela.Infrastructure.Persistence;
-using Microsoft.EntityFrameworkCore;
 using DevFreela.Core.Repositories;
 namespace DevFreela.Application.Queries.GetAllProjects
 {
