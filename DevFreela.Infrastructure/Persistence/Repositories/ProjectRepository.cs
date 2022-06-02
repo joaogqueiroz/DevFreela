@@ -27,5 +27,14 @@ namespace DevFreela.Infrastructure.Persistence.Repositories
       .Include(p => p.Freelancer)
       .SingleOrDefaultAsync(p => p.Id == id);
     }
+    public async Task AddAsync(Project project)
+    {
+      await _dbContext.Projects.AddAsync(project);
+      await _dbContext.SaveChangesAsync();
+    }
+    public async Task SaveChangesAsync()
+    {
+      await _dbContext.SaveChangesAsync();
+    }
   }
 }
