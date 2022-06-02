@@ -2156,25 +2156,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\joaog\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Users\\João\\.nuget\\packages\\": {},
+    "D:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj",
+      "projectUniqueName": "C:\\Users\\João\\Desktop\\dev\\dotnet\\repos\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj",
       "projectName": "DevFreela.Api",
-      "projectPath": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj",
-      "packagesPath": "C:\\Users\\joaog\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Api\\obj\\",
+      "projectPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\repos\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj",
+      "packagesPath": "C:\\Users\\João\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\repos\\DevFreela\\DevFreela.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "D:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\joaog\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\João\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -2184,21 +2184,21 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\Modalgr\\hexagon-library\\HexagonLibrary\\bin\\Debug": {},
+        "C:\\Users\\João\\Desktop\\dev\\dotnet\\ModalGR\\hexagon-library\\HexagonLibrary\\bin\\Debug": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj": {
-              "projectPath": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj"
+            "C:\\Users\\João\\Desktop\\dev\\dotnet\\repos\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj": {
+              "projectPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\repos\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj"
             },
-            "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
-              "projectPath": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
+            "C:\\Users\\João\\Desktop\\dev\\dotnet\\repos\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
+              "projectPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\repos\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
             },
-            "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
+            "C:\\Users\\João\\Desktop\\dev\\dotnet\\repos\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\repos\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
             }
           }
         }
@@ -2250,7 +2250,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
