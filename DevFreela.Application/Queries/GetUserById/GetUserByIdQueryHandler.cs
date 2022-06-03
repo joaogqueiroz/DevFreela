@@ -7,19 +7,20 @@ using MediatR;
 using DevFreela.Application.ViewModels;
 using DevFreela.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
+using DevFreela.Core.Repositories;
 namespace DevFreela.Application.Queries.GetUserById
 {
   public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, UserViewModel>
   {
 
-    private readonly DevFreelaDbContext _dbContext;
-    public GetUserByIdQueryHandler(DevFreelaDbContext dbContext)
+    private readonly IUserRepository _userRepository;
+    public GetUserByIdQueryHandler(IUserRepository userRepository)
     {
-      _dbContext = dbContext;
+      _userRepository = userRepository;
     }
     public async Task<UserViewModel> Handle(GetUserByIdQuery request, CancellationToken cancellationToken)
     {
-      var user = await _dbContext.Users.SingleOrDefaultAsync(u => u.Id == request.Id);
+      var user = await _userRepository.GetByIdAsync(request.Id);
       if (user == null)
       {
         return null;
