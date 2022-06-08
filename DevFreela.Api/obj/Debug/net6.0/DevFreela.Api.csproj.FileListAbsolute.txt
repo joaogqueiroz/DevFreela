@@ -138,3 +138,6 @@ C:\Users\João\Desktop\dev\dotnet\repos\DevFreela\DevFreela.Api\obj\Debug\net6.0
 C:\Users\João\Desktop\dev\dotnet\repos\DevFreela\DevFreela.Api\obj\Debug\net6.0\DevFreela.Api.csproj.CopyComplete
 C:\Users\João\Desktop\dev\dotnet\repos\DevFreela\DevFreela.Api\obj\Debug\net6.0\DevFreela.Api.genruntimeconfig.cache
 C:\Users\João\Desktop\dev\dotnet\repos\DevFreela\DevFreela.Api\obj\Debug\net6.0\ref\DevFreela.Api.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
