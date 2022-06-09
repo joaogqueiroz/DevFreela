@@ -4,6 +4,7 @@ using DevFreela.Application.InputModels;
 using DevFreela.Application.Commands.CreateUser;
 using MediatR;
 using System.Threading.Tasks;
+using System.Linq;
 using DevFreela.Application.Queries.GetUserById;
 namespace DevFreela.Api.Controllers
 {
