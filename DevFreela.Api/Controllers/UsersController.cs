@@ -6,9 +6,11 @@ using DevFreela.Application.Commands.LoginUser;
 using MediatR;
 using System.Threading.Tasks;
 using DevFreela.Application.Queries.GetUserById;
+using Microsoft.AspNetCore.Authorization;
 namespace DevFreela.Api.Controllers
 {
   [Route("api/users")]
+  [Authorize]
   public class UsersController : ControllerBase
   {
     private readonly IMediator _mediator;
@@ -30,6 +32,7 @@ namespace DevFreela.Api.Controllers
       return Ok(user);
     }
     [HttpPost]
+    [AllowAnonymous]
     public async Task<IActionResult> Post([FromBody] CreateUserCommand command)
     {
       var id = await _mediator.Send(command);
@@ -37,6 +40,7 @@ namespace DevFreela.Api.Controllers
     }
     // api/users/login   
     [HttpPut("login")]
+    [AllowAnonymous]
     public async Task<IActionResult> Login([FromBody] LoginUserCommand command)
     {
       var loginUserViewModel = await _mediator.Send(command);

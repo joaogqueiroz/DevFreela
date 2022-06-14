@@ -17,6 +17,8 @@ using DevFreela.Application.Queries.GetProjectById;
 using DevFreela.Application.ViewModels;
 using DevFreela.Infrastructure.Persistence;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
+
 namespace DevFreela.Api.Controllers
 {
   [Route("api/projects")]
@@ -29,6 +31,7 @@ namespace DevFreela.Api.Controllers
     }
 
     [HttpGet]
+    [Authorize(Roles = "client, freelancer")]
     public async Task<IActionResult> Get(string query)
     {
       var getAllProject = new GetAllProjectsQuery(query);
@@ -37,6 +40,7 @@ namespace DevFreela.Api.Controllers
     }
 
     [HttpGet("{Id}")]
+    [Authorize(Roles = "client, freelancer")]
     public async Task<IActionResult> GetById(int Id)
     {
       var query = new GetProjectByIdQuery(Id);
@@ -45,12 +49,15 @@ namespace DevFreela.Api.Controllers
       return Ok(project);
     }
     [HttpPost]
+    [Authorize(Roles = "client")]
     public async Task<IActionResult> Post([FromBody] CreateProjectCommand command)
     {
       var id = await _mediator.Send(command);
       return CreatedAtAction(nameof(GetById), new { id = id }, command);
     }
     [HttpPut("{id}")]
+    [Authorize(Roles = "client")]
+
     public async Task<IActionResult> Put(int id, [FromBody] UpdateProjectCommand command)
     {
       if (command.Description.Length > 200)
@@ -61,6 +68,8 @@ namespace DevFreela.Api.Controllers
       return NoContent();
     }
     [HttpDelete("{id}")]
+    [Authorize(Roles = "client")]
+
     public async Task<IActionResult> Delete(int id)
     {
       var command = new DeleteProjectCommand(id);
@@ -68,12 +77,16 @@ namespace DevFreela.Api.Controllers
       return NoContent();
     }
     [HttpPost("{id}/comments")]
+    [Authorize(Roles = "client, freelancer")]
+
     public async Task<IActionResult> PostComment(int id, [FromBody] CreateCommentCommand command)
     {
       await _mediator.Send(command);
       return NoContent();
     }
     [HttpPut("{id}/start")]
+    [Authorize(Roles = "client")]
+
     public async Task<IActionResult> Start(int id)
     {
       var command = new StartProjectCommand(id);
@@ -81,6 +94,8 @@ namespace DevFreela.Api.Controllers
       return NoContent();
     }
     [HttpPut("{id}/finish")]
+    [Authorize(Roles = "client")]
+
     public async Task<IActionResult> Finish(int id)
     {
       var command = new FinishProjectCommand(id);
