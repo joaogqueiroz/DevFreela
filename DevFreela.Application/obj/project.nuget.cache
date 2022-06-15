@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "R4/X4/TvsNNscWTpEoNeIIgKZhIvnTF3i9tq11FsJX73ZmzvdQa81WXxErxKsRjQ1iugQepTgzRUo1qzvH5AkA==",
+  "dgSpecHash": "sigc6dec6hPr6JhkA5QeUrtN+NBtOjRF7RBq1YKwQFOmW75ZaQCLaVtQacCk6YCzIhVyJAemPzH5Gklqn2ZSdQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
   "expectedPackageFiles": [
@@ -51,5 +51,12 @@
     "C:\\Users\\joaog\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Application\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

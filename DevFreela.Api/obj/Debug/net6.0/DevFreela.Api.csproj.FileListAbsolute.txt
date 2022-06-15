@@ -141,3 +141,6 @@ C:\Users\João\Desktop\dev\dotnet\repos\DevFreela\DevFreela.Api\obj\Debug\net6.0
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
