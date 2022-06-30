@@ -3,7 +3,6 @@ C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\obj\Debug\net6.0\DevFr
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\obj\Debug\net6.0\DevFreela.Api.AssemblyInfoInputs.cache
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\obj\Debug\net6.0\DevFreela.Api.AssemblyInfo.cs
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\obj\Debug\net6.0\DevFreela.Api.csproj.CoreCompileInputs.cache
-C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\obj\Debug\net6.0\DevFreela.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\obj\Debug\net6.0\DevFreela.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\appsettings.json
@@ -144,3 +143,4 @@ C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\Fluen
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\obj\Debug\net6.0\DevFreela.Api.MvcApplicationPartsAssemblyInfo.cs

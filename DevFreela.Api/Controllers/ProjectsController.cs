@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using DevFreela.Api.Models;
 using Microsoft.Extensions.Options;
 using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.Commands.UpdateProject;
@@ -59,10 +58,6 @@ namespace DevFreela.Api.Controllers
 
     public async Task<IActionResult> Put(int id, [FromBody] UpdateProjectCommand command)
     {
-      if (command.Description.Length > 200)
-      {
-        return BadRequest();
-      }
       await _mediator.Send(command);
       return NoContent();
     }

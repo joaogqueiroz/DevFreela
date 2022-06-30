@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using DevFreela.Api.Models;
 using DevFreela.Application.Commands.CreateUser;
 using DevFreela.Application.Commands.LoginUser;
 using MediatR;

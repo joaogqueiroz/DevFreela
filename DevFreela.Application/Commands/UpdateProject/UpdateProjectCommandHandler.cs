@@ -1,11 +1,4 @@
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using DevFreela.Infrastructure.Persistence;
-using DevFreela.Core.Entities;
-using System.Linq;
 using DevFreela.Core.Repositories;
 namespace DevFreela.Application.Commands.UpdateProject
 {

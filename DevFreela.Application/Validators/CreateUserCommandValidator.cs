@@ -12,7 +12,7 @@ namespace DevFreela.Application.Validators
           .EmailAddress()
           .WithMessage("Wrong e-mail");
 
-      RuleFor(p => p.PassWord)
+      RuleFor(p => p.Password)
           .Must(ValidPassword)
           .WithMessage("Password should have 8 characters, 1 upper, 1 lower and 1 special characters");
 
