@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bfROWTY5sAlpjPTBLSTPeWSvdYlSC/4Wz/tYXBZ/IWmJBU/92DvZG4KI5/Lgj5OqyJ6FpcHFhE+m3JBdysRfuQ==",
+  "dgSpecHash": "/Cj7vOkT9VhBVjDclLR4CO7obO0Pgp37V2zqV3lHXQ7D8XqEDXMhkEV8Wpvptds2Y/HQPhkpr+OH47ZtCntvfA==",
   "success": true,
   "projectFilePath": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,7 @@
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\joaog\\.nuget\\packages\\microsoft.extensions.http\\6.0.0\\microsoft.extensions.http.6.0.0.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\joaog\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
