@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {}
+    "c:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
+    "c:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
+        "projectUniqueName": "c:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
         "projectName": "DevFreela.Core",
-        "projectPath": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
+        "projectPath": "c:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
         "packagesPath": "C:\\Users\\joaog\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\obj\\",
+        "outputPath": "c:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
+    "c:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
+        "projectUniqueName": "c:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
         "projectName": "DevFreela.Infrastructure",
-        "projectPath": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
+        "projectPath": "c:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\joaog\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Infrastructure\\obj\\",
+        "outputPath": "c:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -96,8 +96,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
-                "projectPath": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
+              "c:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
+                "projectPath": "c:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
               }
             }
           }
