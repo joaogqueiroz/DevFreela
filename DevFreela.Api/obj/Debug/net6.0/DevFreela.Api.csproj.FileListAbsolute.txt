@@ -144,3 +144,4 @@ C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\Micro
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\obj\Debug\net6.0\DevFreela.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\joaog\Desktop\dev\dotnet\DevFreela\DevFreela.Api\bin\Debug\net6.0\RabbitMQ.Client.dll

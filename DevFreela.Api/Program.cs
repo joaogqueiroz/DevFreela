@@ -1,6 +1,7 @@
 using DevFreela.Application.Commands.CreateProject;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
+using DevFreela.Api.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,14 +26,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DevFreelaCs");
 builder.Services.AddDbContext<DevFreelaDbContext>(options => options.UseSqlServer(connectionString));
-builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
-builder.Services.AddScoped<ISkillRepository, SkillRepository>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-
+builder.Services.AddInfrastructure();
 builder.Services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
     .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
 
-builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddMediatR(typeof(CreateProjectCommand));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
