@@ -2000,8 +2000,12 @@
       "DevFreela.Core >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.3",
+<<<<<<< HEAD
       "Microsoft.Extensions.Http >= 6.0.0",
       "RabbitMQ.Client >= 6.4.0"
+=======
+      "Microsoft.Extensions.Http >= 6.0.0"
+>>>>>>> 6da364b9cb324b90d9c61335af3fedb745f41735
     ]
   },
   "packageFolders": {

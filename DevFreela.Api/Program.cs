@@ -20,6 +20,7 @@ using DevFreela.Api.Filters;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using DevFreela.Infrastructure.Payments;
 
 var builder = WebApplication.CreateBuilder(args);
 

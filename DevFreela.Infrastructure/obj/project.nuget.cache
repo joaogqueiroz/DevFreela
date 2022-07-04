@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "nTK0yIknUaHH89/LpO3tD1CVKyBldv2R74TzsCmkeo0OWRtDwDBI4vhb7eYR8/GyF89uV/5hooRRczu3r7Zv5Q==",
+=======
+  "dgSpecHash": "y0DLBndSrW90Co6f32uXvaKnHIL7piK+dJve1zbik8g2UrhsMoGKA04lrg+LqE3n4olZmUakK+5SDpOnSuFViw==",
+>>>>>>> 6da364b9cb324b90d9c61335af3fedb745f41735
   "success": true,
   "projectFilePath": "C:\\Users\\joaog\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
   "expectedPackageFiles": [

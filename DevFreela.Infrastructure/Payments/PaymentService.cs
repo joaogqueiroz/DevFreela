@@ -23,8 +23,6 @@ namespace DevFreela.Infrastructure.Payments
       var paymentInfoBytes = Encoding.UTF8.GetBytes(paymentInfoJson);
 
       _messageBusService.Publish(QUEUE_NAME, paymentInfoBytes);
-
-      //need to implement payment gateway
     }
   }
 }
