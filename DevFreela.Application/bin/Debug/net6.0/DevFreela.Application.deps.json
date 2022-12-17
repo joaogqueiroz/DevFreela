@@ -12,7 +12,8 @@
           "DevFreela.Infrastructure": "1.0.0",
           "FluentValidation.AspNetCore": "11.0.2",
           "MediatR": "10.0.1",
-          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
+          "RabbitMQ.Client": "6.4.0"
         },
         "runtime": {
           "DevFreela.Application.dll": {}
