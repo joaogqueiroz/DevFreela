@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ccv4F3VZ8wiTfuDFx1lNSElICU/Dml9aGY0XfXyezQ2rZSO/PvlHYQm+DTR5fVbd+keAiqpgfF6qFP9oc/Rcog==",
+  "dgSpecHash": "hQLS5gD4/gOK6iBu4IOdmXbKvgY45I9QDQlyrRyAiwHnpDn1W1LkaZIWIFMgb+szSREVmFjE/jrbcYrV4UYpLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
+  "projectFilePath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\João\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\João\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
@@ -52,12 +52,5 @@
     "C:\\Users\\João\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512",
     "C:\\Users\\João\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

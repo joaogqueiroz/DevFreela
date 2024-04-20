@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yKnyxM0KaKtYozo4fmLbZ6AAdWLQoYQTaRKkPDHnX4tjSO8l/yQP20wkoPBCVTJclia710RC24g5cY1RSq1gbA==",
+  "dgSpecHash": "+N05maZGprArNkeIl6GtpwMV2tEr08KDS7Eq4MOnJD4CJODaNw6JYjHmS7Tfb6IbxjoUYR1SI7OsbaEZ5zbATw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
+  "projectFilePath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

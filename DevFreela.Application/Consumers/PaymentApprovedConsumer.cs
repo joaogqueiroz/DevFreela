@@ -23,12 +23,16 @@ namespace DevFreela.Application.Consumers
         public PaymentApprovedConsumer(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
-            var factory = new ConnectionFactory
+            var _factory = new ConnectionFactory
             {
                 HostName = "localhost",
+                Port = 5672
 
             };
-            _connection = factory.CreateConnection();
+            _factory.UserName = "guest";
+            _factory.Password = "guest";
+
+            _connection = _factory.CreateConnection();
             _channel = _connection.CreateModel();
 
             _channel.QueueDeclare(

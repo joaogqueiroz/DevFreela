@@ -7,12 +7,15 @@ namespace DevFreela.Infrastructure.MessageBus
   {
     private readonly ConnectionFactory _factory;
 
-    public MessageBusService()
+    public MessageBusService(IConfiguration configuration)
     {
       _factory = new ConnectionFactory
       {
-        HostName = "localHost"
+        HostName = "localhost",
+        Port = 5672
       };
+        _factory.UserName = "guest";
+        _factory.Password = "guest";
     }
     public void Publish(string queue, byte[] message)
     {

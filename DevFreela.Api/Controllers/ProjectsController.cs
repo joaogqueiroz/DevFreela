@@ -30,7 +30,7 @@ namespace DevFreela.Api.Controllers
 
     [HttpGet]
     // [Authorize(Roles = "client, freelancer")]
-    public async Task<IActionResult> Get(string query)
+    public async Task<IActionResult> Get(string? query)
     {
       var getAllProject = new GetAllProjectsQuery(query);
       var projects = await _mediator.Send(getAllProject);
@@ -38,7 +38,7 @@ namespace DevFreela.Api.Controllers
     }
 
     [HttpGet("{Id}")]
-    [Authorize(Roles = "client, freelancer")]
+    //[Authorize(Roles = "client, freelancer")]
     public async Task<IActionResult> GetById(int Id)
     {
       var query = new GetProjectByIdQuery(Id);
@@ -55,7 +55,7 @@ namespace DevFreela.Api.Controllers
     }
 
     [HttpPut("{id}")]
-    [Authorize(Roles = "client")]
+    //[Authorize(Roles = "client")]
     public async Task<IActionResult> Put(int id, [FromBody] UpdateProjectCommand command)
     {
       await _mediator.Send(command);

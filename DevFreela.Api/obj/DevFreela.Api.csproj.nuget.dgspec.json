@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj": {}
+    "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj": {
+    "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj",
+        "projectUniqueName": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj",
         "projectName": "DevFreela.Api",
-        "projectPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj",
+        "projectPath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj",
         "packagesPath": "C:\\Users\\João\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Api\\obj\\",
+        "outputPath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -28,6 +28,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "C:\\Users\\João\\Desktop\\dev\\dotnet\\ModalGR\\hexagon-library\\HexagonLibrary\\bin\\Debug": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -35,14 +36,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj": {
-                "projectPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj"
+              "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj": {
+                "projectPath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj"
               },
-              "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
-                "projectPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
+              "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
+                "projectPath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
               },
-              "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
+              "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
+                "projectPath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
               }
             }
           }
@@ -94,7 +95,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -106,18 +108,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj": {
+    "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
+        "projectUniqueName": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
         "projectName": "DevFreela.Application",
-        "projectPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
+        "projectPath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
         "packagesPath": "C:\\Users\\João\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Application\\obj\\",
+        "outputPath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -134,6 +136,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "C:\\Users\\João\\Desktop\\dev\\dotnet\\ModalGR\\hexagon-library\\HexagonLibrary\\bin\\Debug": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -141,11 +144,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
-                "projectPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
+              "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
+                "projectPath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
               },
-              "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
+              "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
+                "projectPath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
               }
             }
           }
@@ -183,7 +186,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -192,18 +196,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
+    "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
+        "projectUniqueName": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
         "projectName": "DevFreela.Core",
-        "projectPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
+        "projectPath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj",
         "packagesPath": "C:\\Users\\João\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\obj\\",
+        "outputPath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -220,6 +224,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "C:\\Users\\João\\Desktop\\dev\\dotnet\\ModalGR\\hexagon-library\\HexagonLibrary\\bin\\Debug": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -244,7 +249,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -253,18 +259,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
+    "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
+        "projectUniqueName": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
         "projectName": "DevFreela.Infrastructure",
-        "projectPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
+        "projectPath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\João\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\obj\\",
+        "outputPath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -281,6 +287,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "C:\\Users\\João\\Desktop\\dev\\dotnet\\ModalGR\\hexagon-library\\HexagonLibrary\\bin\\Debug": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -288,8 +295,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
-                "projectPath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
+              "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj": {
+                "projectPath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Core\\DevFreela.Core.csproj"
               }
             }
           }
@@ -329,7 +336,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -338,7 +346,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

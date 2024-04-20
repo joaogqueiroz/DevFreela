@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oXVpmfYWMpoRYmDBd4LsdlwBI5FAJS8Nz4f6Vi+3ZEWKX98r59+q33i3RF2CeLBtVIQsnrbzp80Ib0N//trUMw==",
+  "dgSpecHash": "B70hIGEajOrjAFtJfTawnnyMX38lZkSDoDjGwHmCdYt8iA51Ecn2af5pxoWhHWIJdxmfV4jzlJC3/+/zshzgtg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\João\\Desktop\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj",
+  "projectFilePath": "C:\\dev\\dotnet\\DevFreela\\DevFreela\\DevFreela.Api\\DevFreela.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\João\\.nuget\\packages\\fluentvalidation\\11.0.2\\fluentvalidation.11.0.2.nupkg.sha512",
     "C:\\Users\\João\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.0.2\\fluentvalidation.aspnetcore.11.0.2.nupkg.sha512",

@@ -1,0 +1,33 @@
+version: '3.8'
+
+volumes:
+  devfreelaDB:
+  devfreelaRabbitMQ:
+
+networks:
+  sqlserverNET:
+  devfreelaNET:
+
+services:
+
+  rabbitmq:
+      hostname: my-rabbit
+      ports:
+          - '15672:15672'
+          - '5672:5672'
+      image: 'rabbitmq:3-management'
+
+  sqlserver:
+    image: "mcr.microsoft.com/mssql/server:2019-latest"
+    container_name: devfreelasqlserver
+    ports:
+      - "1433:1433"
+    volumes:
+      - devfreelaDB:/var/lib/sqlserver
+    networks:
+      - sqlserverNET
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: numsey#2021
+      MSSQL_PID: EXPRESS
+      
