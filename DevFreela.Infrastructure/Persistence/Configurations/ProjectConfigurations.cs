@@ -12,6 +12,10 @@ namespace DevFreela.Infrastructure.Persistence.Configurations
         .HasKey(p => p.Id);
 
       builder
+        .Property(p => p.TotalCost)
+        .HasPrecision(18, 2);
+
+      builder
         .HasOne(p => p.Freelancer)
         .WithMany(f => f.FreelanceProjects)
         .HasForeignKey(p => p.IdFreelancer)
