@@ -30,10 +30,10 @@ DevFreela.Api ──(Payments queue)──▶ DevFreela.Payments
 
 | Method | Route | Role |
 | --- | --- | --- |
-| GET | `/api/projects?query=` | |
-| GET | `/api/projects/{id}` | |
-| POST | `/api/projects` | |
-| PUT | `/api/projects/{id}` | |
+| GET | `/api/projects?query=` | client, freelancer |
+| GET | `/api/projects/{id}` | client, freelancer |
+| POST | `/api/projects` | client |
+| PUT | `/api/projects/{id}` | client |
 | DELETE | `/api/projects/{id}` | client |
 | POST | `/api/projects/{id}/comments` | client, freelancer |
 | PUT | `/api/projects/{id}/start` | client |
