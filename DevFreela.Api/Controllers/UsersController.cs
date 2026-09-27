@@ -35,7 +35,7 @@ namespace DevFreela.Api.Controllers
     public async Task<IActionResult> Post([FromBody] CreateUserCommand command)
     {
       var id = await _mediator.Send(command);
-      return CreatedAtAction(nameof(GetById), new { id = id }, command);
+      return CreatedAtAction(nameof(GetById), new { id = id }, new { id, command.FullName, command.Email, command.BirthDate, command.Role });
     }
     // api/users/login   
     [HttpPut("login")]
