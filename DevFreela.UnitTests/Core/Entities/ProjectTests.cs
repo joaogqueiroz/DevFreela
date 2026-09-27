@@ -28,5 +28,33 @@ namespace DevFreela.UnitTests.Core.Entities
       Assert.NotNull(project.StartedAt);
 
     }
+
+    [Fact]
+    public void TestIfProjectFinishesAfterPaymentIsApproved()
+    {
+      var project = new Project("Project Title", "Project Description", 1, 2, 1000);
+      project.Start();
+      project.SetPaymentPending();
+
+      Assert.Equal(ProjectStatusEnum.PaymentPending, project.Status);
+      Assert.Null(project.FinishedAt);
+
+      project.Finish();
+
+      Assert.Equal(ProjectStatusEnum.Finished, project.Status);
+      Assert.NotNull(project.FinishedAt);
+    }
+
+    [Fact]
+    public void TestIfProjectDoesNotFinishWithoutPendingPayment()
+    {
+      var project = new Project("Project Title", "Project Description", 1, 2, 1000);
+      project.Start();
+
+      project.Finish();
+
+      Assert.Equal(ProjectStatusEnum.InProgress, project.Status);
+      Assert.Null(project.FinishedAt);
+    }
   }
 }
