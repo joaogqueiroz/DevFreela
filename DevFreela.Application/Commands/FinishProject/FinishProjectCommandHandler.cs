@@ -17,13 +17,15 @@ namespace DevFreela.Application.Commands.FinishProject
     {
       var project = await _projectRepository.GetByIdAsync(request.Id);
 
+      // Persist PaymentPending before publishing, so the payment-approved
+      // consumer never reads the project while it is still InProgress.
+      project.SetPaymentPending();
+      await _projectRepository.SaveChangesAsync();
+
       var paymentInfoDTO = new PaymentInfoDTO(request.Id, request.CreditCardNumber, request.Cvv, request.ExpiresAt, request.FullName, project.TotalCost);
 
       _paymentService.ProcessPayment(paymentInfoDTO);
 
-      project.SetPaymentPending();
-
-      await _projectRepository.SaveChangesAsync();
       return true;
     }
   }
