@@ -64,7 +64,7 @@ dotnet ef database update --project DevFreela.Infrastructure --startup-project D
 dotnet run --project DevFreela.Api
 ```
 
-The default connection string in `DevFreela.Api/appsettings.json` points to SQL Server LocalDB. To use the SQL Server container instead, change `ConnectionStrings:DevFreelaCs`.
+The connection string in `DevFreela.Api/appsettings.json` (`ConnectionStrings:DevFreelaCs`) points to the SQL Server container from `docker-compose.yml`.
 
 The RabbitMQ connection is set in the `RabbitMQ` section of the same file.
 
