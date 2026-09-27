@@ -66,6 +66,8 @@ dotnet run --project DevFreela.Api
 
 The default connection string in `DevFreela.Api/appsettings.json` points to SQL Server LocalDB. To use the SQL Server container instead, change `ConnectionStrings:DevFreelaCs`.
 
+The RabbitMQ connection is set in the `RabbitMQ` section of the same file.
+
 To run the payment flow end to end, also start [DevFreela.Payments](https://github.com/joaogqueiroz/DevFreela.Payments).
 
 ## Tests

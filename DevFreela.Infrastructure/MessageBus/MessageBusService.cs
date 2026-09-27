@@ -9,13 +9,14 @@ namespace DevFreela.Infrastructure.MessageBus
 
     public MessageBusService(IConfiguration configuration)
     {
+      var rabbitMq = configuration.GetSection("RabbitMQ");
       _factory = new ConnectionFactory
       {
-        HostName = "localhost",
-        Port = 5672
+        HostName = rabbitMq["HostName"],
+        Port = int.Parse(rabbitMq["Port"]),
+        UserName = rabbitMq["UserName"],
+        Password = rabbitMq["Password"]
       };
-        _factory.UserName = "guest";
-        _factory.Password = "guest";
     }
     public void Publish(string queue, byte[] message)
     {

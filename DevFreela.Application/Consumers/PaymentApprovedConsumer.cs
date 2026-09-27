@@ -1,5 +1,6 @@
 ﻿using DevFreela.Core.IntegrationEvents;
 using DevFreela.Core.Repositories;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RabbitMQ.Client;
@@ -20,17 +21,17 @@ namespace DevFreela.Application.Consumers
         private readonly IModel _channel;
         private readonly IServiceProvider _serviceProvider;
 
-        public PaymentApprovedConsumer(IServiceProvider serviceProvider)
+        public PaymentApprovedConsumer(IServiceProvider serviceProvider, IConfiguration configuration)
         {
             _serviceProvider = serviceProvider;
+            var rabbitMq = configuration.GetSection("RabbitMQ");
             var _factory = new ConnectionFactory
             {
-                HostName = "localhost",
-                Port = 5672
-
+                HostName = rabbitMq["HostName"],
+                Port = int.Parse(rabbitMq["Port"]),
+                UserName = rabbitMq["UserName"],
+                Password = rabbitMq["Password"]
             };
-            _factory.UserName = "guest";
-            _factory.Password = "guest";
 
             _connection = _factory.CreateConnection();
             _channel = _connection.CreateModel();
