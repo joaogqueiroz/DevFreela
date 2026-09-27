@@ -2,7 +2,7 @@
 
 A REST API for a freelancing marketplace. Clients post projects, freelancers work on them, and payment runs asynchronously through a separate microservice over RabbitMQ.
 
-Built with ASP.NET Core 6 using CQRS with MediatR and a layered, clean-architecture layout.
+Built with ASP.NET Core 8 using CQRS with MediatR and a layered, clean-architecture layout.
 
 ## Architecture
 
@@ -47,11 +47,11 @@ Swagger UI is available in Development, with a Bearer token button.
 
 ## Tech stack
 
-C# · .NET 6 · ASP.NET Core · Entity Framework Core · SQL Server · MediatR · FluentValidation · JWT · RabbitMQ · Swagger · xUnit · Moq · Docker Compose
+C# · .NET 8 · ASP.NET Core · Entity Framework Core · SQL Server · MediatR · FluentValidation · JWT · RabbitMQ · Swagger · xUnit · Moq · Docker Compose
 
 ## Running locally
 
-Requirements: .NET 6 SDK and Docker.
+Requirements: .NET 8 SDK and Docker.
 
 ```sh
 # RabbitMQ (management UI at http://localhost:15672, guest/guest) and SQL Server
