@@ -1,5 +1,7 @@
 # DevFreela
 
+[![CI](https://github.com/joaogqueiroz/DevFreela/actions/workflows/ci.yml/badge.svg)](https://github.com/joaogqueiroz/DevFreela/actions/workflows/ci.yml)
+
 A REST API for a freelancing marketplace. Clients post projects, freelancers work on them, and payment runs asynchronously through a separate microservice over RabbitMQ.
 
 Built with ASP.NET Core 8 using CQRS with MediatR and a layered, clean-architecture layout.
