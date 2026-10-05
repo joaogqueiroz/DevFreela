@@ -4,7 +4,7 @@ using DevFreela.Core.DTOs;
 using DevFreela.Core.Services;
 namespace DevFreela.Application.Commands.FinishProject
 {
-  public class FinishProjectCommandHandler : IRequestHandler<FinishProjectCommand, bool>
+  public class FinishProjectCommandHandler : IRequestHandler<FinishProjectCommand, FinishProjectResult>
   {
     private readonly IProjectRepository _projectRepository;
     private readonly IPaymentService _paymentService;
@@ -13,9 +13,13 @@ namespace DevFreela.Application.Commands.FinishProject
       _projectRepository = projectRepository;
       _paymentService = paymentService;
     }
-    public async Task<bool> Handle(FinishProjectCommand request, CancellationToken cancellationToken)
+    public async Task<FinishProjectResult> Handle(FinishProjectCommand request, CancellationToken cancellationToken)
     {
       var project = await _projectRepository.GetByIdAsync(request.Id);
+      if (project == null)
+      {
+        return FinishProjectResult.ProjectNotFound;
+      }
 
       // Persist PaymentPending before publishing, so the payment-approved
       // consumer never reads the project while it is still InProgress.
@@ -26,7 +30,7 @@ namespace DevFreela.Application.Commands.FinishProject
 
       _paymentService.ProcessPayment(paymentInfoDTO);
 
-      return true;
+      return FinishProjectResult.PaymentRequested;
     }
   }
 }

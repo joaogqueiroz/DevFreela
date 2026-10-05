@@ -8,7 +8,7 @@ using DevFreela.Core.Entities;
 using DevFreela.Core.Repositories;
 namespace DevFreela.Application.Commands.CreateComment
 {
-  public class CreateCommentCommandHandler : IRequestHandler<CreateCommentCommand, Unit>
+  public class CreateCommentCommandHandler : IRequestHandler<CreateCommentCommand, bool>
   {
 
     private readonly IProjectRepository _projectRepository;
@@ -16,11 +16,16 @@ namespace DevFreela.Application.Commands.CreateComment
     {
       _projectRepository = projectRepository;
     }
-    public async Task<Unit> Handle(CreateCommentCommand request, CancellationToken cancellationToken)
+    public async Task<bool> Handle(CreateCommentCommand request, CancellationToken cancellationToken)
     {
+      var project = await _projectRepository.GetByIdAsync(request.IdProject);
+      if (project == null)
+      {
+        return false;
+      }
       var comment = new ProjectComment(request.Content, request.IdProject, request.IdUser);
       await _projectRepository.AddCommentAsync(comment);
-      return Unit.Value;
+      return true;
     }
   }
 }

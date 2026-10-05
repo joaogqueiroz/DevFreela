@@ -1,7 +1,7 @@
 using MediatR;
 namespace DevFreela.Application.Commands.StartProject
 {
-  public class StartProjectCommand : IRequest<Unit>
+  public class StartProjectCommand : IRequest<bool>
   {
     public StartProjectCommand(int id)
     {

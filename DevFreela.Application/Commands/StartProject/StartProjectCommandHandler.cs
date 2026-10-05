@@ -6,19 +6,23 @@ using MediatR;
 using DevFreela.Core.Repositories;
 namespace DevFreela.Application.Commands.StartProject
 {
-  public class StartProjectCommandHandler : IRequestHandler<StartProjectCommand, Unit>
+  public class StartProjectCommandHandler : IRequestHandler<StartProjectCommand, bool>
   {
     private readonly IProjectRepository _projectRepository;
     public StartProjectCommandHandler(IProjectRepository projectRepository)
     {
       _projectRepository = projectRepository;
     }
-    public async Task<Unit> Handle(StartProjectCommand request, CancellationToken cancellationToken)
+    public async Task<bool> Handle(StartProjectCommand request, CancellationToken cancellationToken)
     {
       var project = await _projectRepository.GetByIdAsync(request.Id);
+      if (project == null)
+      {
+        return false;
+      }
       project.Start();
       await _projectRepository.SaveChangesAsync();
-      return Unit.Value;
+      return true;
     }
   }
 }

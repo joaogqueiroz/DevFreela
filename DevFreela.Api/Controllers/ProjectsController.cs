@@ -58,7 +58,8 @@ namespace DevFreela.Api.Controllers
     [Authorize(Roles = "client")]
     public async Task<IActionResult> Put(int id, [FromBody] UpdateProjectCommand command)
     {
-      await _mediator.Send(command);
+      var found = await _mediator.Send(command);
+      if (!found) return NotFound();
       return NoContent();
     }
 
@@ -67,7 +68,8 @@ namespace DevFreela.Api.Controllers
     public async Task<IActionResult> Delete(int id)
     {
       var command = new DeleteProjectCommand(id);
-      await _mediator.Send(command);
+      var found = await _mediator.Send(command);
+      if (!found) return NotFound();
       return NoContent();
     }
 
@@ -75,7 +77,9 @@ namespace DevFreela.Api.Controllers
     [Authorize(Roles = "client, freelancer")]
     public async Task<IActionResult> PostComment(int id, [FromBody] CreateCommentCommand command)
     {
-      await _mediator.Send(command);
+      command.IdProject = id;
+      var found = await _mediator.Send(command);
+      if (!found) return NotFound();
       return NoContent();
     }
 
@@ -84,7 +88,8 @@ namespace DevFreela.Api.Controllers
     public async Task<IActionResult> Start(int id)
     {
       var command = new StartProjectCommand(id);
-      await _mediator.Send(command);
+      var found = await _mediator.Send(command);
+      if (!found) return NotFound();
       return NoContent();
     }
 
@@ -94,10 +99,7 @@ namespace DevFreela.Api.Controllers
     {
       command.Id = id;
       var result = await _mediator.Send(command);
-      if (!result)
-      {
-        return BadRequest("O pagamento não pode ser processado.");
-      }
+      if (result == FinishProjectResult.ProjectNotFound) return NotFound();
       return NoContent();
     }
   }
