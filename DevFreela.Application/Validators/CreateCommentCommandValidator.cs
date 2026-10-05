@@ -8,8 +8,14 @@ namespace DevFreela.Application.Validators
     public CreateCommentCommandValidator()
     {
       RuleFor(c => c.Content)
-      .MaximumLength(255)
-      .WithMessage("Maximum length for description is 255 characters");
+        .NotEmpty()
+        .WithMessage("Comment is required")
+        .MaximumLength(255)
+        .WithMessage("Maximum length for a comment is 255 characters");
+
+      RuleFor(c => c.IdUser)
+        .GreaterThan(0)
+        .WithMessage("User is required");
     }
   }
 }
