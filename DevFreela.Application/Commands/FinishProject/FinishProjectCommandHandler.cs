@@ -2,6 +2,7 @@ using MediatR;
 using DevFreela.Core.Repositories;
 using DevFreela.Core.DTOs;
 using DevFreela.Core.Services;
+using DevFreela.Core.Enums;
 namespace DevFreela.Application.Commands.FinishProject
 {
   public class FinishProjectCommandHandler : IRequestHandler<FinishProjectCommand, FinishProjectResult>
@@ -19,6 +20,12 @@ namespace DevFreela.Application.Commands.FinishProject
       if (project == null)
       {
         return FinishProjectResult.ProjectNotFound;
+      }
+      // Only work in progress can be paid for; this also stops a second payment
+      // request while the first one is still PaymentPending.
+      if (project.Status != ProjectStatusEnum.InProgress)
+      {
+        return FinishProjectResult.ProjectNotInProgress;
       }
 
       // Persist PaymentPending before publishing, so the payment-approved

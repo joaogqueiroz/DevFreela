@@ -100,6 +100,7 @@ namespace DevFreela.Api.Controllers
       command.Id = id;
       var result = await _mediator.Send(command);
       if (result == FinishProjectResult.ProjectNotFound) return NotFound();
+      if (result == FinishProjectResult.ProjectNotInProgress) return BadRequest("Only a project in progress can be finished.");
       return NoContent();
     }
   }

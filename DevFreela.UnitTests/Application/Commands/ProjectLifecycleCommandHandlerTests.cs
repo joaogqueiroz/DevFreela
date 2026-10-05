@@ -87,5 +87,69 @@ namespace DevFreela.UnitTests.Application.Commands
         dto.FullName == "Client" &&
         dto.Amount == 1500)), Times.Once);
     }
+
+    private static Project ProjectIn(string state)
+    {
+      var project = new Project("Project title", "Project description", 1, 2, 1500);
+      switch (state)
+      {
+        case "Created":
+          break;
+        case "PaymentPending":   // already finished once, waiting for the payment
+          project.Start();
+          project.SetPaymentPending();
+          break;
+        case "Finished":
+          project.Start();
+          project.SetPaymentPending();
+          project.Finish();
+          break;
+        case "Cancelled":
+          project.Start();
+          project.Cancel();
+          break;
+      }
+      Assert.Equal(state, project.Status.ToString());
+      return project;
+    }
+
+    [Theory]
+    [InlineData("Created")]          // never started: nothing to pay for yet
+    [InlineData("PaymentPending")]   // finishing twice would charge twice
+    [InlineData("Finished")]
+    [InlineData("Cancelled")]
+    public async Task FinishProject_NotInProgress_IsRefusedWithoutPayment(string state)
+    {
+      //Arrange
+      var project = ProjectIn(state);
+      var projectRepositoryMock = new Mock<IProjectRepository>();
+      projectRepositoryMock.Setup(r => r.GetByIdAsync(1)).ReturnsAsync(project);
+      var paymentServiceMock = new Mock<IPaymentService>();
+      var handler = new FinishProjectCommandHandler(projectRepositoryMock.Object, paymentServiceMock.Object);
+
+      //Act
+      var result = await handler.Handle(new FinishProjectCommand { Id = 1, CreditCardNumber = "4111111111111111", Cvv = "123", ExpiresAt = "12/30", FullName = "Client" }, new CancellationToken());
+
+      //Assert
+      Assert.Equal(FinishProjectResult.ProjectNotInProgress, result);
+      Assert.Equal(state, project.Status.ToString());
+      paymentServiceMock.Verify(p => p.ProcessPayment(It.IsAny<PaymentInfoDTO>()), Times.Never);
+      projectRepositoryMock.Verify(r => r.SaveChangesAsync(), Times.Never);
+    }
+
+    [Fact]
+    public async Task FinishProject_InProgress_RequestsPayment()
+    {
+      //Arrange
+      var projectRepositoryMock = new Mock<IProjectRepository>();
+      projectRepositoryMock.Setup(r => r.GetByIdAsync(1)).ReturnsAsync(StartedProject());
+      var handler = new FinishProjectCommandHandler(projectRepositoryMock.Object, new Mock<IPaymentService>().Object);
+
+      //Act
+      var result = await handler.Handle(new FinishProjectCommand { Id = 1, CreditCardNumber = "4111111111111111", Cvv = "123", ExpiresAt = "12/30", FullName = "Client" }, new CancellationToken());
+
+      //Assert
+      Assert.Equal(FinishProjectResult.PaymentRequested, result);
+    }
   }
 }
