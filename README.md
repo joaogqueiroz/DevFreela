@@ -74,6 +74,10 @@ To run the payment flow end to end, also start [DevFreela.Payments](https://gith
 
 ## Tests
 
+- `DevFreela.UnitTests` (xUnit + Moq) covers the entities, the command handlers and the validators: unknown projects, finishing only projects in progress, saving PaymentPending before the payment is requested, sign-up rules and project costs.
+- `DevFreela.ApiTests` starts the whole API with `WebApplicationFactory` against SQL Server and RabbitMQ from [Testcontainers](https://dotnet.testcontainers.org/). It checks the HTTP behavior: wrong JSON types and malformed bodies (400), validation messages, missing tokens (401), the wrong role (403), unknown ids (404) and finishing a project twice.
+
 ```sh
-dotnet test
+dotnet test                         # both projects, needs Docker running
+dotnet test DevFreela.UnitTests     # no Docker needed
 ```

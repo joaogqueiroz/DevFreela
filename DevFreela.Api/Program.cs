@@ -107,3 +107,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+// Lets WebApplicationFactory<Program> in DevFreela.ApiTests start the API
+public partial class Program { }
