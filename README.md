@@ -8,24 +8,58 @@ Built with ASP.NET Core 8 using CQRS with MediatR and a layered, clean-architect
 
 ## Architecture
 
-```
-DevFreela.Api             Controllers, JWT auth, Swagger, validation filter
-DevFreela.Application     Commands, queries and handlers (MediatR), FluentValidation validators,
-                          view models, RabbitMQ consumer for approved payments
-DevFreela.Core            Entities, enums, domain exceptions, repository and service interfaces
-DevFreela.Infrastructure  EF Core DbContext and migrations, repositories, JWT token service,
-                          RabbitMQ publisher
-DevFreela.UnitTests       xUnit + Moq tests for handlers and entities
+```mermaid
+flowchart TB
+    user(["Client or freelancer"]) -- "HTTP + JWT" --> api["DevFreela.Api<br/>controllers, JWT auth, Swagger, validation filter"]
+    api --> app["DevFreela.Application<br/>commands, queries and handlers (MediatR), validators,<br/>payment-approved consumer"]
+    api --> infra
+    app --> core["DevFreela.Core<br/>entities, enums, domain exceptions, interfaces"]
+    app --> infra["DevFreela.Infrastructure<br/>EF Core, repositories, JWT tokens, RabbitMQ publisher"]
+    infra --> core
+    infra --> sql[("SQL Server")]
+
+    subgraph rabbit ["RabbitMQ"]
+        direction LR
+        paymentsq[["Payments"]]
+        approvedq[["PaymentApproved"]]
+    end
+
+    infra -- "payment request" --> paymentsq --> payments["DevFreela.Payments<br/>separate microservice"]
+    payments -- "approved payments only" --> approvedq --> app
 ```
 
 - **CQRS:** every write is a command (`CreateProject`, `StartProject`, `FinishProject`, `CreateComment`, `LoginUser`…) and every read is a query, each with its own handler.
 - **Auth:** JWT bearer tokens with `client` and `freelancer` roles.
-- **Async payments:** finishing a project publishes the payment details to the `Payments` queue and sets the project to `PaymentPending`. The [DevFreela.Payments](https://github.com/joaogqueiroz/DevFreela.Payments) service processes it and publishes a payment-approved event, which a background consumer in this API picks up to finish the project.
+- **Async payments:** finishing a project publishes the payment details to the `Payments` queue and sets the project to `PaymentPending`. The [DevFreela.Payments](https://github.com/joaogqueiroz/DevFreela.Payments) service processes it and, when the payment is approved, publishes a payment-approved event, which a background consumer in this API picks up to finish the project.
 
-```
-DevFreela.Api ──(Payments queue)──▶ DevFreela.Payments
-      ▲                                    │
-      └──────(payment approved queue)──────┘
+## Payment flow
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor client as Client
+    participant api as DevFreela.Api
+    participant db as SQL Server
+    participant mq as RabbitMQ
+    participant payments as DevFreela.Payments
+
+    client->>api: PUT /api/projects/{id}/finish (card data, client role)
+    alt project is not InProgress
+        api-->>client: 400 Bad Request
+    else project is InProgress
+        api->>db: status = PaymentPending
+        api->>mq: Payments queue (project id, card, amount)
+        api-->>client: 204 No Content
+        mq->>payments: payment request
+        payments->>payments: check the card and the amount
+        alt payment approved
+            payments->>mq: PaymentApproved queue (project id)
+            mq->>api: payment-approved event
+            api->>db: status = Finished
+        else payment refused
+            Note over payments,db: nothing is published, the project stays PaymentPending
+        end
+    end
 ```
 
 ## Endpoints
