@@ -1,15 +1,14 @@
-﻿using DevFreela.Core.IntegrationEvents;
-using DevFreela.Core.Repositories;
+﻿using DevFreela.Core.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace DevFreela.Application.Consumers
@@ -20,10 +19,12 @@ namespace DevFreela.Application.Consumers
         private readonly IConnection _connection;
         private readonly IModel _channel;
         private readonly IServiceProvider _serviceProvider;
+        private readonly ILogger<PaymentApprovedConsumer> _logger;
 
-        public PaymentApprovedConsumer(IServiceProvider serviceProvider, IConfiguration configuration)
+        public PaymentApprovedConsumer(IServiceProvider serviceProvider, IConfiguration configuration, ILogger<PaymentApprovedConsumer> logger)
         {
             _serviceProvider = serviceProvider;
+            _logger = logger;
             var rabbitMq = configuration.GetSection("RabbitMQ");
             var _factory = new ConnectionFactory
             {
@@ -55,28 +56,29 @@ namespace DevFreela.Application.Consumers
                 var paymentsApprovedBytes = eventArgs.Body.ToArray();
                 var paymentsApprovedJson = Encoding.UTF8.GetString(paymentsApprovedBytes);
 
-                var paymentsApprovedIntegrationEvent = JsonSerializer.Deserialize<PaymentApprovedIntegrationEvent>(paymentsApprovedJson);
-                await FinishProject(paymentsApprovedIntegrationEvent.IdProject);
+                // This handler is async void: an exception escaping it would stop the whole API
+                try
+                {
+                    using var scope = _serviceProvider.CreateScope();
+                    var handler = new PaymentApprovedMessageHandler(scope.ServiceProvider.GetRequiredService<IProjectRepository>());
 
+                    if (!await handler.HandleAsync(paymentsApprovedJson))
+                    {
+                        _logger.LogWarning("Payment-approved message dropped: unreadable or unknown project");
+                    }
+                }
+                catch (Exception e)
+                {
+                    _logger.LogError(e, "Payment-approved message could not be processed");
+                }
+
+                // Requeueing would redeliver the same message forever, so it is always removed
                 _channel.BasicAck(eventArgs.DeliveryTag, false);
 
             };
 
             _channel.BasicConsume(PAYMENT_APPROVED_QUEUE, false, consumer);
             return Task.CompletedTask;
-        }
-        public async Task FinishProject(int Id)
-        {
-            using (var scope = _serviceProvider.CreateScope())
-            {
-                var projectRepository = scope.ServiceProvider.GetRequiredService<IProjectRepository>();
-
-                var project = await projectRepository.GetByIdAsync(Id);
-
-                project.Finish();
-
-                await projectRepository.SaveChangesAsync();
-            }
         }
     }
 }
