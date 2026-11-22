@@ -83,11 +83,11 @@ Swagger UI is available in Development, with a Bearer token button.
 
 ## Tech stack
 
-C# · .NET 8 · ASP.NET Core · Entity Framework Core · SQL Server · MediatR · FluentValidation · JWT · RabbitMQ · Swagger · xUnit · Moq · Docker Compose
+C# · .NET 10 · ASP.NET Core · Entity Framework Core · SQL Server · MediatR · FluentValidation · JWT · RabbitMQ · Swagger · xUnit · Moq · Docker Compose
 
 ## Running locally
 
-Requirements: .NET 8 SDK and Docker.
+Requirements: .NET 10 SDK and Docker.
 
 ```sh
 # RabbitMQ (management UI at http://localhost:15672, guest/guest) and SQL Server
